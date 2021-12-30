@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Kurs Mata Uang</title>
+</head>
+
+<body style="background-color: rgb(157, 157, 199);color:rgb(3, 3, 3); text-align: center;">
+	<br><br><br>
+	<table border="1" style="width: 100%">
+		<tr>
+			<td>ketik jumlah</td>
+			<td>pilih mata Uang</td>
+			<td>hasil rupiahnya</td>
+		</tr>
+		<tr>
+			<td><input onkeyup="kurs()" style="width: 90%" placeholder="Insert Amount" type="text" name="nilai"
+					id="nilai"></td>
+			<td>
+				<select onchange="kurs()" id="kurs" style="width: 90%">
+					<option value="0">Choose</option>
+					<option value="1">Dollar US</option>
+					<option value="2">Dollar Singapore</option>
+					<option value="3">Ringgit</option>
+					<option value="4">Yen</option>
+					<option value="5">Euro</option>
+					<option value="6">Riyal</option>
+				</select>
+			</td>
+			<td><input type="text" disabled="" id="rupiah" placeholder="Total in Rupiah" style="width: 90%"
+					name="rupiah"></td>
+		</tr>
+	</table>
+
+</body>
+<script type="text/javascript">
+	function kurs() {
+
+		k = document.getElementById("kurs").value;
+
+		if (k == 1) {
+			input = document.getElementById("nilai").value;
+			nilai = 9915
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (k == 2) {
+			input = document.getElementById("nilai").value;
+			nilai = 13472;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (k == 3) {
+			input = document.getElementById("nilai").value;
+			nilai = 874;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (k == 4) {
+			input = document.getElementById("nilai").value;
+			nilai = 120;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (k == 5) {
+			input = document.getElementById("nilai").value;
+			nilai = 15888;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		} else if (k == 6) {
+			input = document.getElementById("nilai").value;
+			nilai = 3592;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		}
+	}
+</script>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<style>
+    span {
+        visibility: hidden;
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>FORM VALIDATION</h1>
+    <input type="text" id="nama" placeholder="Masukan Nama Anda"><br>
+    <span>Nama Tidak Boleh Kosong</span><br>
+    <input type="email" id="email" placeholder="Masukan Email Anda"><br>
+    <span>Email Tidak Boleh Kosong</span><br>
+    <input type="time" id="jam" placeholder="Masukan Jam Terbang "><br>
+    <span>Jam Tidak Boleh Kosong</span><br>
+    <input type="text" id="jumlah" placeholder="Tujuan Keberangkatan"><br>
+    <span>Tujuan Tidak Boleh Kosong</span><br>
+    <input type="number" id="tiket" placeholder="Jumlah Tiket">
+    <span>Jumkah Tidak Boleh Kosong</span><br>
+    <button onclick="validasi()">Submit</button>
+    <div>
+        <p id="Hasil1"></p>
+        <p id="Hasil2"></p>
+        <p id="Hasil3"></p>
+        <p id="Hasil4"></p>
+        <p id="Hasil5"></p>
+    </div>
+
+    <script>
+        let nama = document.getElementById("nama")
+        let email = document.getElementById("email")
+        let jam = document.getElementById("jam")
+        let jumlah = document.getElementById("jumlah")
+        let tiket = document.getElementById("tiket")
+        let span = document.getElementsByTagName("span")
+
+        function validasi() {
+            if (nama.value == "" || nama.value.length >= 30) {
+                span[0].style.visibility = "visible"
+            } else {
+                document.getElementById("Hasil1").innerHTML = "nama : " + nama.value;
+            }
+
+            if (email.value == "") {
+                span[1].style.visibility = "visible"
+            } else {
+                document.getElementById("Hasil2").innerHTML = "email : " + email.value;
+            }
+
+            if (jam.value == "") {
+                span[2].style.visibility = "visible"
+            } else {
+                document.getElementById("Hasil3").innerHTML = "jam : " + jam.value;
+            }
+
+            if (jumlah.value == "") {
+                span[3].style.visibility = "visible"
+            } else {
+                document.getElementById("Hasil4").innerHTML = "tujuan : " + jumlah.value;
+            }
+
+            if (tiket.value == "") {
+                span[4].style.visibility = "visible"
+            } else {
+                document.getElementById("Hasil5").innerHTML = "jumlah : " + tiket.value;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image picker</title>
+    <style>
+        .pict {
+            width: 30%;
+            height: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>IMAGE PICKER</h1>
+    <select id="selectOne" onchange="myImage()">
+        <option value="Trenggiling">Trenggiling</option>
+        <option value="Platipus">Platipus</option>
+        <option value="Panda">Panda</option>
+        <option value="Komodo">Komodo</option>
+        <option value="Merak">Merak</option>
+        <option value="Beruang">Beruang</option>
+        <option value="Badak">Badak</option>
+    </select>
+    <div id="demo"></div>
+
+    <script>
+        function myImage() {
+            var x = document.getElementById("selectOne").value;
+
+            if (x == "Trenggiling") {
+                Trenggiling = document.getElementById("demo").innerHTML = '<img class="pict" src="img/trenggiling.jpg">'
+                window.alert("ini gambar " + x);
+            }
+            if (x == "Platipus") {
+                Platipus = document.getElementById("demo").innerHTML = '<img class="pict" src="img/platipus.jpg">'
+                window.alert("ini gambar " + x);
+            }
+            if (x == "Panda") {
+                Panda = document.getElementById("demo").innerHTML = '<img class="pict" src="img/panda.jpg">'
+                window.alert("ini gambar " + x);
+            }
+            if (x == "Komodo") {
+                Komodo = document.getElementById("demo").innerHTML = '<img class="pict" src="img/komodo.jpg">'
+                window.alert("ini gambar " + x);
+            }
+            if (x == "Merak") {
+                Merak = document.getElementById("demo").innerHTML = '<img class="pict" src="img/merak.jpg">'
+                window.alert("ini gambar " + x);
+            }
+            if (x == "Beruang") {
+                Beruang = document.getElementById("demo").innerHTML = '<img class="pict" src="img/beruang.jpg">'
+                window.alert("ini gambar " + x);
+            }
+            if (x == "Badak") {
+                Badak = document.getElementById("demo").innerHTML = '<img class="pict" src="img/Badak.jpg">'
+                window.alert("ini gambar " + x);
+            }
+        }
+    </script>
+</body>
+
+</html>
